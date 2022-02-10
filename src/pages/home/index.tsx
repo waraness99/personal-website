@@ -32,7 +32,7 @@ const Home: NextPage = () => {
           <Tag size="lg" fontWeight="bold">
             Open to work
           </Tag>
-          <H1>Hi, I'm Constant Druon, I'm a Frontend Engineer.</H1>
+          <H1>{`Hi, I'm Constant Druon, I'm a Frontend Engineer.`}</H1>
           <H2 color={mode("gray.500", "gray.400")}>
             I try to make the world a better place by creating quality software that improve the lives of those around
             me.
