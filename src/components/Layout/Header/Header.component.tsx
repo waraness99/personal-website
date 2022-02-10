@@ -1,7 +1,7 @@
 import React from "react";
 import NextLink from "next/link";
 import { useRouter } from "next/router";
-import { Box, Button, Flex, HStack } from "@chakra-ui/react";
+import { Box, Button, Flex, HStack, useColorModeValue as mode } from "@chakra-ui/react";
 import { saveAs } from "file-saver";
 
 import { Logo } from "src/components/Logo/Logo.component";
@@ -15,7 +15,15 @@ export const Header = () => {
   const router = useRouter();
 
   return (
-    <Box as="header" position={{ base: "static", lg: "sticky" }} zIndex="10" top="0" w="100%" borderBottomWidth="1px">
+    <Box
+      as="header"
+      position={{ base: "static", lg: "sticky" }}
+      zIndex="10"
+      top="0"
+      w="100%"
+      borderBottomWidth="1px"
+      bg={mode("white", "gray.800")}
+    >
       <Box maxW="7xl" mx="auto" py="4" px={{ base: "6", md: "8" }}>
         <Flex as="nav" justify="space-between">
           <HStack flex="1" justify="space-between">
