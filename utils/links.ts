@@ -1,5 +1,4 @@
-import { HiHome, HiBookOpen, HiCloudDownload, HiQuestionMarkCircle } from "react-icons/hi";
-import { FaDiscord, FaInstagram, FaTwitter, FaMediumM } from "react-icons/fa";
+import { HiHome, HiBookOpen, HiMail } from "react-icons/hi";
 
 export const navbar = [
   {
@@ -8,19 +7,14 @@ export const navbar = [
     path: "/",
   },
   {
-    id: "link 1",
-    icon: HiCloudDownload,
-    path: "#",
-  },
-  {
-    id: "link 2",
-    icon: HiQuestionMarkCircle,
-    path: "#",
-  },
-  {
-    id: "link 3",
+    id: "portfolio",
     icon: HiBookOpen,
-    path: "#",
+    path: "/portfolio",
+  },
+  {
+    id: "contact",
+    icon: HiMail,
+    path: "/contact",
   },
 ];
 
@@ -30,46 +24,19 @@ export const footer = [
     path: "/",
   },
   {
-    id: "link 1",
-    path: "#",
+    id: "portfolio",
+    path: "/portfolio",
   },
   {
-    id: "link 2",
-    path: "#",
-  },
-  {
-    id: "link 3",
-    path: "#",
+    id: "contact",
+    path: "/contact",
   },
 ];
 
 export const externalLinks = {
-  discord: "https://discord.com",
   twitter: "https://twitter.com/home",
-  medium: "https://medium.com",
-  instagram: "https://instagram.com",
-  email: "hello@example.com",
+  linkedin: "https://linkedin.com",
+  gitlab: "https://gitlab.com",
+  github: "https://github.com",
+  email: "mailto:druon.constant@gmail.com",
 };
-
-export const social = [
-  {
-    id: "discord",
-    icon: FaDiscord,
-    href: externalLinks.discord,
-  },
-  {
-    id: "twitter",
-    icon: FaTwitter,
-    href: externalLinks.twitter,
-  },
-  {
-    id: "medium",
-    icon: FaMediumM,
-    href: externalLinks.medium,
-  },
-  {
-    id: "instagram",
-    icon: FaInstagram,
-    href: externalLinks.instagram,
-  },
-];

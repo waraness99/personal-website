@@ -14,8 +14,9 @@ const DesktopNavLink: React.FC<DesktopNavLinkProps> = ({ href, active, ...rest }
         aria-current={active ? "page" : undefined}
         fontWeight="semibold"
         textTransform="capitalize"
+        color={mode("gray.500", "gray.400")}
         _activeLink={{
-          color: mode("blue.500", "blue.200"),
+          color: mode("black", "white"),
           fontWeight: "bold",
         }}
         {...rest}

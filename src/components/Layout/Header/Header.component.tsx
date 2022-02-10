@@ -1,9 +1,11 @@
 import React from "react";
 import NextLink from "next/link";
 import { useRouter } from "next/router";
-import { Box, Button, Flex, HStack, VisuallyHidden } from "@chakra-ui/react";
-import { DarkModeSwitch } from "src/components/DarkModeSwitch/DarkModeSwitch.component";
+import { Box, Button, Flex, HStack } from "@chakra-ui/react";
+import { saveAs } from "file-saver";
+
 import { Logo } from "src/components/Logo/Logo.component";
+import { DarkModeSwitch } from "src/components/DarkModeSwitch/DarkModeSwitch.component";
 
 import { MobileNav } from "./components/MobileNav.component";
 import { NavLink } from "./components/NavLink.component";
@@ -16,11 +18,10 @@ export const Header = () => {
     <Box as="header" position={{ base: "static", lg: "sticky" }} zIndex="10" top="0" w="100%" borderBottomWidth="1px">
       <Box maxW="7xl" mx="auto" py="4" px={{ base: "6", md: "8" }}>
         <Flex as="nav" justify="space-between">
-          <HStack spacing="8">
+          <HStack flex="1" justify="space-between">
             <NextLink href="/" passHref>
               <Box as="a" rel="home">
-                <VisuallyHidden>Your company</VisuallyHidden>
-                <Logo h="6" iconColor="blue.500" />
+                <Logo />
               </Box>
             </NextLink>
 
@@ -31,21 +32,23 @@ export const Header = () => {
                 </NavLink.Desktop>
               ))}
             </HStack>
-          </HStack>
-          <Flex align="center">
-            <HStack spacing="4">
+
+            <HStack>
               <DarkModeSwitch />
+
               <NextLink href="#" passHref>
-                <Button display={{ base: "none", md: "flex" }} size="md">
-                  CTA
+                <Button
+                  display={{ base: "none", lg: "flex" }}
+                  size="md"
+                  onClick={() => saveAs("/constant-druon-resume.pdf")}
+                >
+                  Get my resume!
                 </Button>
               </NextLink>
-            </HStack>
 
-            <Box ml="5">
               <MobileNav />
-            </Box>
-          </Flex>
+            </HStack>
+          </HStack>
         </Flex>
       </Box>
     </Box>

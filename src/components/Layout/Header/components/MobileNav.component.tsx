@@ -4,7 +4,6 @@ import { NavLink } from "./NavLink.component";
 import {
   Box,
   Button,
-  Center,
   Flex,
   Portal,
   SimpleGrid,
@@ -13,11 +12,12 @@ import {
   useColorModeValue as mode,
   IconButton,
 } from "@chakra-ui/react";
+import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 import { HTMLMotionProps, motion, Variants } from "framer-motion";
 import { RemoveScroll } from "react-remove-scroll";
 import FocusLock from "react-focus-lock";
+import { saveAs } from "file-saver";
 import { navbar } from "utils/links";
-import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 
 const variants: Variants = {
   show: {
@@ -110,8 +110,8 @@ export const MobileNav = () => {
               </SimpleGrid>
 
               <NextLink href="#" passHref>
-                <Button mt="8" w="full">
-                  CTA
+                <Button mt="8" w="full" onClick={() => saveAs("/constant-druon-resume.pdf")}>
+                  Get my resume!
                 </Button>
               </NextLink>
             </Box>

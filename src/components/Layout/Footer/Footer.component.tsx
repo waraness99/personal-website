@@ -14,7 +14,7 @@ export const Footer: React.FC = () => {
           <Stack spacing="10" divider={<StackDivider />}>
             <Stack direction={{ base: "column", lg: "row" }} spacing={{ base: "10", lg: "28" }}>
               <Stack spacing="8" flex="1" shouldWrapChildren>
-                <Logo h={{ base: "6", md: "8" }} iconColor="blue.500" />
+                <Logo />
                 <Text fontSize="lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</Text>
               </Stack>
 
