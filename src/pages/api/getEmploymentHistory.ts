@@ -3,11 +3,11 @@ const base = new Airtable({ apiKey: process.env.AIRTABLE_API_KEY }).base(process
 
 const table = base(process.env.AIRTABLE_BASE_NAME);
 
-const minifyRecords = (records) => {
-  return records.map((record) => getMinifyRecord(record));
+const minifyRecords = (records: any) => {
+  return records.map((record: any) => getMinifyRecord(record));
 };
 
-const getMinifyRecord = (record) => {
+const getMinifyRecord = (record: any) => {
   if (!record.fields.currentPosition) {
     record.fields.currentPosition = false;
   }
@@ -18,7 +18,7 @@ const getMinifyRecord = (record) => {
   };
 };
 
-export default async function handler(req, res) {
+export default async function handler(req: any, res: any) {
   try {
     const records = await table.select({}).firstPage();
     const minifiedRecords = minifyRecords(records);
