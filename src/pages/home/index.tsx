@@ -11,16 +11,12 @@ const Home: NextPage = () => {
     <PageLayout>
       <Section>
         <Stack spacing="16">
-          <H1>Next.js - Chakra UI Starter project</H1>
+          <H1>My personal website</H1>
 
-          <Stack spacing="6">
-            <Text fontSize="xl">
-              This is the a quick starter project using <Code fontSize="lg">Next.js</Code> +{" "}
-              <Code fontSize="lg">chakra-ui</Code> + <Code fontSize="lg">TypeScript</Code>.
-            </Text>
-            <Text fontSize="xl">It also includes a basic layout configuration and dark mode.</Text>
-            <Text fontSize="xl">Created with ❤️ by Waraness.</Text>
-          </Stack>
+          <Text fontSize="xl">
+            My personal website is build using <Code fontSize="lg">Next.js</Code> + <Code fontSize="lg">chakra-ui</Code>{" "}
+            + <Code fontSize="lg">TypeScript</Code>.
+          </Text>
         </Stack>
       </Section>
     </PageLayout>
