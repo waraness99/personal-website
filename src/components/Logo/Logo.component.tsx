@@ -1,7 +1,8 @@
 import React from "react";
-import { chakra, useToken } from "@chakra-ui/react";
+import { chakra, HTMLChakraProps, useToken } from "@chakra-ui/react";
 
-export const Logo = ({ iconColor, ...rest }: { iconColor: string }) => {
+export const Logo = (props: HTMLChakraProps<"svg"> & { iconColor?: string }) => {
+  const { iconColor = "currentColor", ...rest } = props;
   const color = useToken("colors", iconColor ?? "currentColor");
 
   return (
