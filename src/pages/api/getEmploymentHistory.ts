@@ -8,8 +8,11 @@ const minifyRecords = (records: any) => {
 };
 
 const getMinifyRecord = (record: any) => {
-  if (!record.fields.currentPosition) {
-    record.fields.currentPosition = false;
+  if (!record.fields.isCurrentJob) {
+    record.fields.isCurrentJob = false;
+  }
+  if (record.fields.companyLogo) {
+    record.fields.companyLogo = record.fields.companyLogo[0].url;
   }
 
   return {

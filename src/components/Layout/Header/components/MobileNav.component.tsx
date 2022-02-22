@@ -111,7 +111,7 @@ export const MobileNav = () => {
 
               <NextLink href="#" passHref>
                 <Button mt="8" w="full" onClick={() => saveAs("/constant-druon-resume.pdf")}>
-                  Get my resume!
+                  Get my resume
                 </Button>
               </NextLink>
             </Box>

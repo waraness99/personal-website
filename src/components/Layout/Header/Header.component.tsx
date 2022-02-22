@@ -50,7 +50,7 @@ export const Header = () => {
                   size="md"
                   onClick={() => saveAs("/constant-druon-resume.pdf")}
                 >
-                  Get my resume!
+                  Get my resume
                 </Button>
               </NextLink>
 

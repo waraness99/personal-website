@@ -4,9 +4,18 @@ const theme = extendTheme({
   components: {
     Heading: {
       defaultProps: {
-        size: "2xl",
-        fontWeight: "semibold",
-        lineHeight: "122%",
+        size: "xl",
+      },
+    },
+    Text: {
+      baseStyle: ({ colorMode }: { colorMode: any }) => ({
+        color: colorMode === "light" ? "gray.500" : "gray.200",
+        fontSize: "xl",
+      }),
+    },
+    Button: {
+      baseStyle: {
+        fontWeight: "bold",
       },
     },
   },

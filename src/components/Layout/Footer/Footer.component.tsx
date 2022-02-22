@@ -13,16 +13,18 @@ export const Footer: React.FC = () => {
         <Box as="footer" role="contentinfo" mx="auto" maxW="7xl" py="12" px={{ base: "4", md: "8" }}>
           <Stack spacing="10" divider={<StackDivider />}>
             <Stack direction={{ base: "column", lg: "row" }} spacing={{ base: "10", lg: "28" }}>
-              <Stack spacing="8" flex="1" shouldWrapChildren>
+              <Stack spacing="4" flex="1" shouldWrapChildren>
                 <Logo />
-                <Text fontSize="lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</Text>
+                <Text fontSize="base" maxW="2xl">
+                  {`Welcome to my personal website! I'm a Frontend Engineer Student. I try to make the world a better place by creating
+                  quality software that improve the lives of those around me.`}
+                </Text>
               </Stack>
 
               <LinkGrid />
             </Stack>
             <Stack direction={{ base: "column-reverse", md: "row" }} justifyContent="space-between" alignItems="center">
               <Copyright />
-              <Text fontSize="sm">Duis aute irure dolor</Text>
             </Stack>
           </Stack>
         </Box>
