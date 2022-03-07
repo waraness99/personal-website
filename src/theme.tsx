@@ -9,7 +9,7 @@ const theme = extendTheme({
     },
     Text: {
       baseStyle: ({ colorMode }: { colorMode: any }) => ({
-        color: colorMode === "light" ? "gray.500" : "gray.200",
+        color: colorMode === "light" ? "gray.500" : "gray.400",
         fontSize: "xl",
       }),
     },

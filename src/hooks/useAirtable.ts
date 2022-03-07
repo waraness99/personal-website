@@ -10,9 +10,7 @@ export const useAirtable = (apiName: string) => {
       setData(res);
     };
     handleGetData();
-    setTimeout(() => {
-      setIsLoading(false);
-    }, 500);
+    setIsLoading(false);
   }, []);
 
   return { isLoading, data };
