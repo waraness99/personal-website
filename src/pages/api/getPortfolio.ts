@@ -1,15 +1,15 @@
 const Airtable = require("airtable");
 const base = new Airtable({ apiKey: process.env.AIRTABLE_API_KEY }).base(process.env.AIRTABLE_BASE_ID);
 
-const table = base("employmentHistory");
+const table = base("portfolio");
 
 const minifyRecords = (records: any) => {
   return records.map((record: any) => getMinifyRecord(record));
 };
 
 const getMinifyRecord = (record: any) => {
-  if (record.fields.companyLogo) {
-    record.fields.companyLogo = record.fields.companyLogo[0].url;
+  if (record.fields.primaryImage) {
+    record.fields.primaryImage = record.fields.primaryImage[0].url;
   }
 
   return {
