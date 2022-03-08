@@ -14,7 +14,9 @@ export const ProjectGrid = () => {
   return (
     <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={8}>
       {!portfolio.isLoading &&
-        sortedPortfolio.map((oneProject) => <ProjectCard key={oneProject.id} projectInfo={oneProject.fields} />)}
+        sortedPortfolio.map((oneProject) => (
+          <ProjectCard key={oneProject.id} id={oneProject.id} projectInfo={oneProject.fields} />
+        ))}
     </SimpleGrid>
   );
 };
