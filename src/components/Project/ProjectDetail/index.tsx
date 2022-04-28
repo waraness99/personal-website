@@ -13,8 +13,12 @@ import { ProjectMetadata } from "./ProjectMetadata";
 import { ProjectProps } from "utils/types";
 
 export const ProjectPage = ({ id }: { id: string | string[] }) => {
-  const project = useAirtable(`getProjects/${id}`);
-  const projectInfo: ProjectProps = project?.data?.fields;
+  const project = useAirtable<{ fields: ProjectProps }>(`getProjects/${id}`);
+  const projectInfo = project?.data?.fields;
+
+  if (projectInfo === undefined) {
+    return <></>;
+  }
 
   return (
     <Section>

@@ -7,6 +7,10 @@ const ProjectDetail: NextPage = () => {
   const router = useRouter();
   const { id } = router.query;
 
-  return id && <ProjectPage id={id} />;
+  if (id === undefined) {
+    // TODO loading
+    return <></>;
+  }
+  return <ProjectPage id={id} />;
 };
 export default ProjectDetail;

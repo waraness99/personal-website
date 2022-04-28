@@ -22,12 +22,12 @@ export const HomeFunFacts = () => {
     },
     {
       title: "I've written a comic book",
-      description: `I've worked my way up to 3x listening so I could listen to more. So far I've saved ~100 days of listening by doing this.`,
+      description: `In 2017, I participated in a contest organized by France in memory of the deportees of the WWII. My comic book has been published by a publishing house!`,
       icon: IoPlayOutline,
     },
     {
       title: "I listen to books and podcasts at 3x",
-      description: `In 2017, I participated in a contest organized by France in memory of the deportees of the WWII. My comic book has been published by a publishing house!`,
+      description: `I've worked my way up to 3x listening so I could listen to more. So far I've saved ~100 days of listening by doing this.`,
       icon: IoBookOutline,
     },
   ];

@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
-export const useAirtable = (apiName: string) => {
-  const [data, setData] = useState<any[]>([]);
+export const useAirtable = <T>(apiName: string) => {
+  const [data, setData] = useState<T>();
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {

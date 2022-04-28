@@ -1,5 +1,19 @@
 import { IconType } from "react-icons";
 
+enum JobKeys {
+  "companyName",
+  "jobTitle",
+  "startDate",
+  "endDate",
+  "place",
+  "description",
+  "companyLogo",
+}
+
+export type JobProps = {
+  [key in keyof typeof JobKeys]: string;
+};
+
 export type ProjectPreviewProps = {
   name: string;
   date: string;
