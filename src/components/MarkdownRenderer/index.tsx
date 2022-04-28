@@ -13,14 +13,14 @@ export const MarkdownRenderer = ({ content }: { content: string }) => {
         </Text>
       );
     },
-    a: (props: { children: any; href: string }) => {
-      const { children, href } = props;
-      return (
-        <Link href={href} isExternal>
-          {children}
-        </Link>
-      );
-    },
+    // a: (props: { children: any; href: string }) => {
+    //   const { children, href } = props;
+    //   return (
+    //     <Link href={href} isExternal>
+    //       {children}
+    //     </Link>
+    //   );
+    // },
   };
 
   return (
