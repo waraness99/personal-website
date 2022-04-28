@@ -1,7 +1,7 @@
 import React from "react";
 import { Heading, Stack, SimpleGrid, useColorModeValue as mode } from "@chakra-ui/react";
 import { IoPlayOutline, IoBookOutline, IoLockClosedOutline, IoBicycle } from "react-icons/io5";
-import { uuid } from "uuidv4";
+import { v4 as uuidv4 } from "uuid";
 
 import { Section } from "../../Section";
 import { FunFactCard } from "./FunFactCard";
@@ -16,8 +16,8 @@ export const HomeFunFacts = () => {
       icon: IoLockClosedOutline,
     },
     {
-      title: "I have cycled more than 50,000 miles",
-      description: `I love brainteasers, padlocks included! After hours of practice, I am now able to open nearly any lock. Even with paper clips!`,
+      title: "I have cycled +25,000 miles",
+      description: `I've been cycling in clubs and competitions since I was 9 years old. And on top of that, it's my daily means of transport.`,
       icon: IoBicycle,
     },
     {
@@ -41,7 +41,7 @@ export const HomeFunFacts = () => {
 
       <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10} mt="12">
         {funFacts.map((funFact) => (
-          <FunFactCard key={uuid()} funFactData={funFact} />
+          <FunFactCard key={uuidv4()} funFactData={funFact} />
         ))}
       </SimpleGrid>
     </Section>

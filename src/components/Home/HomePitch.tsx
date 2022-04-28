@@ -14,7 +14,7 @@ export const HomePitch = () => {
         </Center>
 
         <Stack spacing="8" shouldWrapChildren>
-          <Heading as="h1">{`I have had the privilege to do a lot of cool presentations for the startups I cofounded!`}</Heading>
+          <Heading as="h1">{`I had the privilege to do a lot of cool presentations for the startups I cofounded!`}</Heading>
 
           <Text as="h2">
             I try to make the world a better place by creating quality software that improve the lives of those around
