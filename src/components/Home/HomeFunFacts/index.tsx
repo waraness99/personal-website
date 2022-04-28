@@ -1,7 +1,7 @@
 import React from "react";
 import { Heading, Stack, SimpleGrid, useColorModeValue as mode } from "@chakra-ui/react";
 import { IoPlayOutline, IoBookOutline, IoLockClosedOutline, IoBicycle } from "react-icons/io5";
-import uuid from "react-uuid";
+import { uuid } from "uuidv4";
 
 import { Section } from "../../Section";
 import { FunFactCard } from "./FunFactCard";
