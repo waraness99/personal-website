@@ -1,10 +1,11 @@
 import React from "react";
 import Link from "next/link";
 import { Stack, Text, Image, useColorModeValue as mode, Box, Tag, WrapItem, Wrap } from "@chakra-ui/react";
+import { ProjectPreviewProps } from "utils/types";
 
-export const ProjectCard = ({ id, projectInfo }: { id: string; projectInfo: any }) => {
+export const ProjectCard = ({ id, projectInfo }: { id: string; projectInfo: ProjectPreviewProps }) => {
   return (
-    <Link key={id} href="/portfolio/[id]" as={`/portfolio/${id}`} passHref>
+    <Link key={id} href="/projects/[id]" as={`/projects/${id}`} passHref>
       <Box className="group">
         <Box position="relative" h="64" overflow="hidden" bg={mode("gray.100", "whiteAlpha.100")} rounded="lg">
           {projectInfo?.primaryImage && (

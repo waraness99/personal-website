@@ -1,7 +1,7 @@
 import React from "react";
 import { Box, Stack, StackDivider, Text } from "@chakra-ui/react";
 
-import { Logo } from "src/components/Logo/Logo.component";
+import { Logo } from "src/components/Logo";
 
 import { Copyright } from "./components/Copyright.component";
 import { LinkGrid } from "./components/LinkGrid.component";

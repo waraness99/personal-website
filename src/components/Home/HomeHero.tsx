@@ -2,7 +2,7 @@ import React from "react";
 import { Badge, Box, Button, Center, Heading, Img, SimpleGrid, Stack, Text } from "@chakra-ui/react";
 import { FaArrowRight } from "react-icons/fa";
 import { saveAs } from "file-saver";
-import { Section } from "../Section/Section.component";
+import { Section } from "../Section";
 
 export const HomeHero = () => {
   return (

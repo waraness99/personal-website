@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 import { Box, Button, Flex, HStack, useColorModeValue as mode } from "@chakra-ui/react";
 import { saveAs } from "file-saver";
 
-import { Logo } from "src/components/Logo/Logo.component";
+import { Logo } from "src/components/Logo";
 import { DarkModeSwitch } from "src/components/DarkModeSwitch/DarkModeSwitch.component";
 
 import { MobileNav } from "./components/MobileNav.component";

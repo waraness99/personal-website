@@ -1,7 +1,7 @@
 import React from "react";
 import { Box, Heading, List, SimpleGrid, Stack, Text } from "@chakra-ui/react";
-import { Section } from "../Section/Section.component";
-import { EmploymentCard } from "./EmploymentCard.component";
+import { Section } from "../../Section";
+import { EmploymentCard } from "./EmploymentCard";
 
 import { useAirtable } from "src/hooks/useAirtable";
 
@@ -27,11 +27,10 @@ export const EmploymentHistory = () => {
 
         <Box>
           <List spacing="8">
-            {employmentHistory.isLoading
-              ? [0, 1].map((oneEmployment) => <EmploymentCard key={oneEmployment} data={""} isLoading />)
-              : sortedEmploymentHistory.map((oneEmployment) => (
-                  <EmploymentCard key={oneEmployment.id} data={oneEmployment.fields} />
-                ))}
+            {!employmentHistory.isLoading &&
+              sortedEmploymentHistory.map((oneEmployment) => (
+                <EmploymentCard key={oneEmployment.id} job={oneEmployment.fields} />
+              ))}
           </List>
         </Box>
       </SimpleGrid>

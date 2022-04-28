@@ -34,7 +34,9 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-icons": "^4.3.1",
-    "react-markdown": "^8.0.0"
+    "react-markdown": "^8.0.0",
+    "react-player": "^2.10.0",
+    "react-uuid": "^1.0.2"
   },
   "devDependencies": {
     "@chakra-ui/cli": "^1.8.1",

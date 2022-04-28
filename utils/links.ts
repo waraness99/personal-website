@@ -7,9 +7,9 @@ export const navbar = [
     path: "/",
   },
   {
-    id: "portfolio",
+    id: "projects",
     icon: HiBookOpen,
-    path: "/portfolio",
+    path: "/projects",
   },
   {
     id: "contact",
@@ -18,20 +18,7 @@ export const navbar = [
   },
 ];
 
-export const footer = [
-  {
-    id: "home",
-    path: "/",
-  },
-  {
-    id: "portfolio",
-    path: "/portfolio",
-  },
-  {
-    id: "contact",
-    path: "/contact",
-  },
-];
+export const footer = [...navbar];
 
 export const externalLinks = {
   twitter: "https://twitter.com/home",

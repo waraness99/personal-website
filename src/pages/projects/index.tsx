@@ -2,10 +2,10 @@ import React from "react";
 import type { NextPage } from "next";
 import { Stack, Heading, Text } from "@chakra-ui/react";
 
-import { Section } from "src/components/Section/Section.component";
-import { ProjectGrid } from "src/components/Portfolio/ProjectGrid.component";
+import { Section } from "src/components/Section";
+import { ProjectGrid } from "src/components/Project/ProjectGrid";
 
-const Portfolio: NextPage = () => {
+const Projects: NextPage = () => {
   return (
     <Section>
       <Stack spacing="4" shouldWrapChildren mb="12">
@@ -22,4 +22,4 @@ const Portfolio: NextPage = () => {
     </Section>
   );
 };
-export default Portfolio;
+export default Projects;

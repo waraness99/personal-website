@@ -9,8 +9,13 @@ const theme = extendTheme({
     },
     Text: {
       baseStyle: ({ colorMode }: { colorMode: any }) => ({
-        color: colorMode === "light" ? "gray.500" : "gray.400",
-        fontSize: "xl",
+        color: colorMode === "light" ? "gray.500" : "gray.500",
+        fontSize: "lg",
+      }),
+    },
+    Link: {
+      baseStyle: ({ colorMode }: { colorMode: any }) => ({
+        color: colorMode === "light" ? "blue.500" : "blue.400",
       }),
     },
     Button: {
