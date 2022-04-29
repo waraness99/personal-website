@@ -2,16 +2,7 @@ import React from "react";
 import { HStack, Stack, Text, Image, Icon, useColorModeValue as mode, Flex } from "@chakra-ui/react";
 import { MdLocationOn } from "react-icons/md";
 import { formatDate } from "utils/date";
-
-type JobProps = {
-  companyName: string;
-  companyLogo: string;
-  jobTitle: string;
-  place: string;
-  description: string;
-  startDate: string;
-  endDate: string;
-};
+import { JobProps } from "utils/types";
 
 export const EmploymentCard = ({ job }: { job: JobProps }) => {
   return (

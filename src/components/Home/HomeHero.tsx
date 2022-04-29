@@ -1,10 +1,17 @@
 import React from "react";
+import dynamic from "next/dynamic";
 import { Badge, Box, Button, Center, Heading, Img, SimpleGrid, Stack, Text } from "@chakra-ui/react";
+import Spline from "@splinetool/react-spline";
 import { FaArrowRight } from "react-icons/fa";
 import { saveAs } from "file-saver";
+
 import { Section } from "../Section";
 
 export const HomeHero = () => {
+  const Spline = dynamic(() => import("@splinetool/react-spline"), {
+    ssr: false,
+  });
+
   return (
     <Section>
       <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10} alignItems="center">
@@ -39,10 +46,11 @@ export const HomeHero = () => {
           </Button>
         </Stack>
 
-        <Center flex="1" minH="26rem" position="relative" overflow="hidden" rounded="xl">
-          <Box maxW="80%">
+        <Center flex="1" minH="26rem" maxH="32rem" position="relative" overflow="hidden" rounded="xl">
+          {/* <Box maxW="80%">
             <Img objectFit="contain" w="full" h="full" src="/snowboard.webp" alt="nft example" position="relative" />
-          </Box>
+          </Box> */}
+          <Spline scene="https://prod.spline.design/N1cuX5F9W-d0FttG/scene.spline" />
         </Center>
       </SimpleGrid>
     </Section>
